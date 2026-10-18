@@ -1,0 +1,85 @@
+name: 问题报告
+description: 安装失败、闪退、保存或翻译异常等问题
+title: "[问题] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        谢谢你帮助定位问题。请不要上传真实日记、DeepSeek API 密钥或日记备份文件；截图前也请遮住私人内容。
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 问题发生在哪个环节？
+      options:
+        - 下载或安装
+        - 第一次打开
+        - 日记输入、编辑或保存
+        - 日历与日期切换
+        - 追加片段或查看模式
+        - DeepSeek 密钥设置
+        - 生成英文
+        - 备份导出或导入
+        - 其他
+    validations:
+      required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: “一句”版本
+      placeholder: 例如：v0.3.0 Beta
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Mac 型号和 macOS 版本
+      placeholder: 例如：MacBook Air M2，macOS 15.5
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 如何出现这个问题？
+      description: 请按顺序写出你做过的操作。
+      placeholder: |
+        1. 打开……
+        2. 点击……
+        3. 出现……
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际发生了什么？
+      description: 可以粘贴不含隐私信息的报错文字。
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 你原本希望发生什么？
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 截图或补充信息（可选）
+      description: 上传前请遮住日记、密钥、账户余额和其他个人信息。
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已确认反馈中不包含日记正文、API 密钥或备份文件。
+          required: true
+        - label: 我已经完全退出并重新打开过“一句”，问题仍然存在。
+          required: false
