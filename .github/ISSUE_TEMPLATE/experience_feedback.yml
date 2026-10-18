@@ -1,0 +1,55 @@
+name: 使用体验反馈
+description: 分享你使用“一句”后的整体感受
+title: "[体验] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        谢谢你愿意体验“一句”。请不要填写真实日记内容、DeepSeek API 密钥或其他私人信息。
+
+  - type: dropdown
+    id: overall
+    attributes:
+      label: 整体体验
+      options:
+        - 很喜欢
+        - 比较喜欢
+        - 一般
+        - 不太顺手
+        - 暂时无法正常使用
+    validations:
+      required: true
+
+  - type: textarea
+    id: liked
+    attributes:
+      label: 你最喜欢什么？
+      description: 可以是某个功能、界面、颜色或使用感受。
+      placeholder: 例如：打开后就能写，操作比较直接……
+
+  - type: textarea
+    id: confusing
+    attributes:
+      label: 哪一步让你困惑或不顺手？
+      placeholder: 例如：第一次安装时不知道应该把 App 拖到哪里……
+
+  - type: textarea
+    id: wish
+    attributes:
+      label: 你最希望增加或改进什么？
+      placeholder: 如果只能改一件事，你最希望是什么？
+
+  - type: input
+    id: environment
+    attributes:
+      label: Mac 和系统版本（可选）
+      description: 例如：MacBook Air M2，macOS 15.5。
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隐私确认
+      options:
+        - label: 我已确认反馈中不包含日记正文、API 密钥或备份文件。
+          required: true

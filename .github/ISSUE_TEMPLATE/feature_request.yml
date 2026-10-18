@@ -1,0 +1,48 @@
+name: 功能建议
+description: 提议一个新功能或体验改进
+title: "[建议] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        谢谢你为“一句”提出建议。描述使用场景会比只写功能名称更有帮助。
+
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 你是在什么情况下产生这个需求的？
+      placeholder: 例如：我经常在晚上补写白天的片段，希望……
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 你希望“一句”怎样改进？
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-workaround
+    attributes:
+      label: 你现在会怎样解决？（可选）
+
+  - type: dropdown
+    id: importance
+    attributes:
+      label: 这个改进对你有多重要？
+      options:
+        - 有了会更好
+        - 会明显提高使用频率
+        - 没有它就很难继续使用
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隐私确认
+      options:
+        - label: 我已确认反馈中不包含日记正文、API 密钥或备份文件。
+          required: true
